@@ -3323,7 +3323,7 @@
                                 "     , DW_locationKey",
                                 " ",
                                 "",
-                                " from dw.POS_Transactions_ComScore_Finance_Cube"
+                                " from dw.POS_Transactions_ComScore_Summary_Finance_Cube"
                             ],
                             "dataSource": "DW_STAGE"
                         },
@@ -3392,7 +3392,7 @@
                                 "     , DW_locationKey",
                                 " ",
                                 "",
-                                " from dw.POS_Transactions_Qubica_Finance_Cube"
+                                " from dw.POS_Transactions_Qubica_Summary_Finance_Cube"
                             ],
                             "dataSource": "DW_STAGE"
                         },
@@ -3461,7 +3461,7 @@
                                 "     , DW_locationKey",
                                 " ",
                                 "",
-                                " from dw.POS_Transactions_TimeZone_AU_Finance_Cube"
+                                " from dw.POS_Transactions_TimeZone_AU_Summary_Finance_Cube"
                             ],
                             "dataSource": "DW_STAGE"
                         },
@@ -3530,7 +3530,7 @@
                                 "     , DW_locationKey",
                                 " ",
                                 "",
-                                " from dw.POS_Transactions_TimeZone_PH_Finance_Cube"
+                                " from dw.POS_Transactions_TimeZone_PH_Summary_Finance_Cube"
                             ],
                             "dataSource": "DW_STAGE"
                         },
@@ -3599,7 +3599,7 @@
                                 "     , DW_locationKey",
                                 " ",
                                 "",
-                                " from dw.POS_Transactions_TimeZone_IN_Finance_Cube"
+                                " from dw.POS_Transactions_TimeZone_IN_Summary_Finance_Cube"
                             ],
                             "dataSource": "DW_STAGE"
                         },
@@ -3668,7 +3668,7 @@
                                 "     , DW_locationKey",
                                 " ",
                                 "",
-                                " from dw.POS_Transactions_TimeZone_NZ_Finance_Cube"
+                                " from dw.POS_Transactions_TimeZone_NZ_Summary_Finance_Cube"
                             ],
                             "dataSource": "DW_STAGE"
                         },
@@ -3737,7 +3737,7 @@
                                 "     , DW_locationKey",
                                 " ",
                                 "",
-                                " from dw.POS_Transactions_TimeZone_SG_Finance_Cube"
+                                " from dw.POS_Transactions_TimeZone_SG_Summary_Finance_Cube"
                             ],
                             "dataSource": "DW_STAGE"
                         },
@@ -3806,7 +3806,7 @@
                                 "     , DW_locationKey",
                                 " ",
                                 "",
-                                " from dw.POS_Transactions_TimeZone_VI_Finance_Cube"
+                                " from dw.POS_Transactions_TimeZone_VI_Summary_Finance_Cube"
                             ],
                             "dataSource": "DW_STAGE"
                         },
@@ -3940,7 +3940,7 @@
                                 "     , DW_locationKey",
                                 " ",
                                 "",
-                                " from dw.POS_Transactions_TimeZone_ID_Finance_Cube"
+                                " from dw.POS_Transactions_TimeZone_ID_Summary_Finance_Cube"
                             ],
                             "dataSource": "DW_STAGE"
                         },
@@ -18211,4 +18211,4 @@
         ]
     },
     "id": "SemanticModel"
-}}
+}

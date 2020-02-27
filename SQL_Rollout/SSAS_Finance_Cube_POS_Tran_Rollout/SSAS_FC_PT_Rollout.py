@@ -33,16 +33,26 @@ with open(source_path,'r') as j:
 
 content["model"]["dataSources"][0]["connectionString"] = ConnectionString
 
-for each in content["model"]["tables"][6]["partitions"]:
-    for line in each["source"]["query"]:
+for index, each in enumerate(content["model"]["tables"][6]["partitions"]):
+    for i, line in enumerate(content["model"]["tables"][6]["partitions"][index]["source"]["query"]):
         if line.lower().find(TargetString.lower()) > 0 and line.lower().find(NonTargetString.lower()) < 0 and line.lower().find("_Sup_".lower())< 0:
             FindTarget += 1 
-            pre_line= ""
+            pre_line= line
             if POS_Transaction_PartitionType == "Detail":
-                line.replace(TargetString,"Finance_Cube")
+                content["model"]["tables"][6]["partitions"][index]["source"]["query"][i] = content["model"]["tables"][6]["partitions"][index]["source"]["query"][i].replace(TargetString,"Finance_Cube")
             elif POS_Transaction_PartitionType == "Summary":
-                line.replace(TargetString,"Summary_Finance_Cube") 
-            print (f'Cover string from : {pre_line} ==> {line}' ) 
+                content["model"]["tables"][6]["partitions"][index]["source"]["query"][i] = content["model"]["tables"][6]["partitions"][index]["source"]["query"][i].replace(TargetString,"Summary_Finance_Cube") 
+            print (f'Cover string from : {pre_line} ==> {content["model"]["tables"][6]["partitions"][index]["source"]["query"][i]}' ) 
+
+    # for line in each["source"]["query"]:
+    #     if line.lower().find(TargetString.lower()) > 0 and line.lower().find(NonTargetString.lower()) < 0 and line.lower().find("_Sup_".lower())< 0:
+    #         FindTarget += 1 
+    #         pre_line= ""
+    #         if POS_Transaction_PartitionType == "Detail":
+    #             line.replace(TargetString,"Finance_Cube")
+    #         elif POS_Transaction_PartitionType == "Summary":
+    #             line.replace(TargetString,"Summary_Finance_Cube") 
+    #         print (f'Cover string from : {pre_line} ==> {line}' ) 
 
 if FindTarget == 0:
     print (f"Maybe it is already is {POS_Transaction_PartitionType} partition")
